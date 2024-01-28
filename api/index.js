@@ -56,11 +56,11 @@ const users = [
     }
 ]
 
-app.get('/users', async (req, res) => {
+app.get('/api/users', async (req, res) => {
     return res.json(users)
 })
 
-app.get('/users/:id', async (req, res) => {
+app.get('/api/users/:id', async (req, res) => {
     const { id } = req.params
     const currentUser = users.find(user => user.id.toString() === id)
 
